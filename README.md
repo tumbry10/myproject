@@ -16,3 +16,7 @@
     4. Create the superuser
     5. Login to the admin site and create some Book records
     6. Retrieve and Display Book records in an html template(For this I use the home page)
+
+ 4. Django Views and URL routing.
+    1. Much has been done in the previous section
+    2. Here we focus on the View & Url for displaying details of a single instance of a model 

@@ -9,3 +9,11 @@ def index(request):
         'books': books,
     }
     return render(request, 'main/index.html', context)
+
+def book_details(request, id):
+    book = Book.objects.get(id=id)
+
+    context = {
+        'book':book,
+    }
+    return render(request, 'main/book_details.html', context)

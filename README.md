@@ -8,3 +8,11 @@
     4. Create the index view, url & template
     5. Configure the templates in settings.py
     6. Runserver to test, 
+ 
+ 3. Define & Manage ur First Model
+    1. Create the Book model in the model.py and add its diff fields. 
+    2. Create and apply migrations
+    3. Register the Book model to the Admin Site. 
+    4. Create the superuser
+    5. Login to the admin site and create some Book records
+    6. Retrieve and Display Book records in an html template(For this I use the home page)

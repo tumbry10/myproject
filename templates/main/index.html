@@ -6,7 +6,31 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>This is the Home Page</h1>
+    <h1>Welcome to the Home Page</h1><br>
+    <h4>List of all the Books</h4>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Published Date</th>
+                <th>ISBN</th>
+                <th>Number of Pages</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.published_date }}</td>
+                    <td>{{ book.isbn }}</td>
+                    <td>{{ book.pages }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
     
 </body>
 </html>

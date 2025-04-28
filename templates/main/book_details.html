@@ -1,19 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Details</title>
-</head>
-<body>
-    <h1>These are the details for the book: {{ book.title }}</h1>
-    <p>
-        Book Name : {{book.title}} <br>
-        Author : {{book.author}} <br> 
-        Published Date : {{book.published_date}} <br>
-        ISBN Number : {{book.isbn}} <br>
-        Number of Pages : {{book.pages}}
-    </p>
+{% extends 'main/base.html' %}
+
+{% block title %} 
+    Book Details 
+{% endblock title %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>These are the details for the book: {{ book.title }}</h1>
+    </div>
+    <table class="table">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td>Title: </td>
+                <td>{{ book.title|upper }}</td>
+            </tr>
+            <tr>
+                <td>Author: </td>
+                <td>{{ book.author|upper }}</td>
+            </tr>
+            <tr>
+                <td>Published Date: </td>
+                <td>{{ book.published_date|date:"d M Y" }}</td>
+            </tr>
+            <tr>
+                <td>ISBN Number: </td>
+                <td>{{ book.isbn }}</td>
+            </tr>
+            <tr>
+                <td>Number Of Pages: </td>
+                <td>{{ book.pages }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a class="btn btn-outline-secondary" href="{% url 'index' %}" style="width: 150px;">
+                        <span style='font-size:16px;'>&#8617; </span>
+                        
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     
-</body>
-</html>
+{% endblock content %}

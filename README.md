@@ -20,3 +20,10 @@
  4. Django Views and URL routing.
     1. Much has been done in the previous section
     2. Here we focus on the View & Url for displaying details of a single instance of a model 
+
+ 5. Django Templates & Static Files
+   1. Design the responsive layout for the base html file
+   2. Extends the base.html to other html files to list the books and to view single book details
+   3. Design the Navbar and footer.
+   3. Download bootstrap and configure the static files. 
+   4. Link the static files to the html file.

@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
+{% extends 'main/base.html' %}
+{% block content %}
     <h1>Welcome to the Home Page</h1><br>
     <h4>List of all the Books</h4>
-    <table border="1">
+    <table class="table table-striped">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Published Date</th>
@@ -21,6 +16,7 @@
         <tbody>
             {% for book in books %}
                 <tr>
+                    <td>{{ forloop.counter }}</td>
                     <td> 
                         <a href="{% url 'book_details' book.id %}">{{ book.title }}</a>
                     </td>
@@ -33,6 +29,5 @@
         </tbody>
 
     </table>
-    
-</body>
-</html>
+
+    {% endblock content %}

@@ -34,3 +34,10 @@
    3. Create feedback view to process both GET & POST request
    4. Create feedback_form.html template for rendering the form 
    4. Configured the url to map the Feedback view
+
+ 7. User Authentication & Authorization
+   1. Create a new app (user_auths), to handle user authentication procedures
+   2. Configure URLs for user authentication (Registration, Login & Logout)
+   3. Create Registration forms
+   4. Build authentication views, (Registration, Login & Logout)
+   5. Create Authentication Templates 

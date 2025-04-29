@@ -27,3 +27,10 @@
    3. Design the Navbar and footer.
    3. Download bootstrap and configure the static files. 
    4. Link the static files to the html file.
+
+ 6. Handling Forms and User Inputs.
+   1. Create a form in forms.py to handle user feedback
+   2. Create feedback model and migrate, register the model inadmin.py
+   3. Create feedback view to process both GET & POST request
+   4. Create feedback_form.html template for rendering the form 
+   4. Configured the url to map the Feedback view

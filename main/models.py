@@ -13,3 +13,15 @@ class Book(models.Model):
     #To customize the table name
     class Meta:
         db_table = "book"
+
+class Feedback(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    age = models.IntegerField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f'Feedback from {self.name} ({self.email})'
+    
+    class Meta:
+        db_table = 'feedback'

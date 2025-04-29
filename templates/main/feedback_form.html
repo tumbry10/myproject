@@ -1,0 +1,77 @@
+{% extends 'main/base.html' %}
+
+{% block title %} 
+    User Feedback 
+{% endblock title %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Please feel in the form below</h1>
+    </div>
+    
+    <!-- Feedback Form Container -->
+    <div class="container mt-5">
+        <!-- Django Messages -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    
+        <!-- Feedback Form -->
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.name.label_tag }} 
+                {{ form.name }}
+                {% for error in form.name.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                {{ form.email.label_tag }} 
+                {{ form.email }}
+                {% for error in form.email.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                {{ form.age.label_tag }} 
+                {{ form.age }}
+                {% for error in form.age.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                {{ form.message.label_tag }} 
+                {{ form.message }}
+                {% for error in form.message.errors %}
+                    <div class="text-danger">{{ error }}</div>
+                {% endfor %}
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="form-control btn btn-primary">Submit Feedback</button>
+            </div> 
+        </form>
+
+        <!--form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if form.errors %}
+                <div class="errors">
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <button class="btn btn-primary form-control" type="submit"></button>
+        </form-->
+    </div>
+  
+    
+{% endblock content %}

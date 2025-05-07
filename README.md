@@ -22,22 +22,22 @@
     2. Here we focus on the View & Url for displaying details of a single instance of a model 
 
  5. Django Templates & Static Files
-   1. Design the responsive layout for the base html file
-   2. Extends the base.html to other html files to list the books and to view single book details
-   3. Design the Navbar and footer.
-   3. Download bootstrap and configure the static files. 
-   4. Link the static files to the html file.
+    1. Design the responsive layout for the base html file
+    2. Extends the base.html to other html files to list the books and to view single book details
+    3. Design the Navbar and footer.
+    3. Download bootstrap and configure the static files. 
+    4. Link the static files to the html file.
 
  6. Handling Forms and User Inputs.
-   1. Create a form in forms.py to handle user feedback
-   2. Create feedback model and migrate, register the model inadmin.py
-   3. Create feedback view to process both GET & POST request
-   4. Create feedback_form.html template for rendering the form 
-   4. Configured the url to map the Feedback view
+    1. Create a form in forms.py to handle user feedback
+    2. Create feedback model and migrate, register the model inadmin.py
+    3. Create feedback view to process both GET & POST request
+    4. Create feedback_form.html template for rendering the form 
+    5. Configured the url to map the Feedback view
 
  7. User Authentication & Authorization
-   1. Create a new app (user_auths), to handle user authentication procedures
-   2. Configure URLs for user authentication (Registration, Login & Logout)
-   3. Create Registration forms
-   4. Build authentication views, (Registration, Login & Logout)
-   5. Create Authentication Templates 
+    1. Create a new app (user_auths), to handle user authentication procedures
+    2. Configure URLs for user authentication (Registration, Login & Logout)
+    3. Create Registration forms
+    4. Build authentication views, (Registration, Login & Logout)
+    5. Create Authentication Templates 

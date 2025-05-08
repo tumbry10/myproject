@@ -10,8 +10,15 @@
             </div>
         {% endfor %}
     {% endif %}
+
+    <div class="row m-2">
+        <div class="col-md-4">
+            <a class="btn btn-success form-control" href="{% url 'add_book' %}">Add Book</a>
+        </div>
+        <div class="col-md-8"></div>
+    </div>
     
-    <h4>List of all the Books</h4>
+    <h4 class="mt-3">List of all the Books</h4>
     <table class="table table-striped">
         <thead>
             <tr>

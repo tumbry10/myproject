@@ -1,4 +1,26 @@
 from django import forms
+from .models import Book
+
+class BookCreationForm(forms.ModelForm):
+
+    class Meta:
+        model = Book
+        fields = ['title', 'author', 'published_date', 'isbn', 'pages']
+        widgets = {
+            'published_date' : forms.DateInput(attrs={'type':'date', 'class':'form-control'})
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(BookCreationForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['placeholder'] = f'Enter {field.label}'
+    
+    def clean_title(self):
+        title = self.cleaned_data.get('title')
+        if Book.objects.filter(title=title).exists():
+            raise forms.ValidationError("A book with this title already exists.")
+        return title
 
 class UserFeedbackForm(forms.Form):
     name = forms.CharField(label='Name', max_length=100)

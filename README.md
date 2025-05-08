@@ -41,3 +41,11 @@
     3. Create Registration forms
     4. Build authentication views, (Registration, Login & Logout)
     5. Create Authentication Templates 
+
+8. Create a User Registration & Login System
+    1. Setup Django Authentication
+    2. Create Registration Form
+    3. Build Registration View
+    4. Create Login View
+    5. Setup Logout View
+    6. Use decorators to protect pages. 
